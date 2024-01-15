@@ -7,32 +7,32 @@ function playRound() {
   const computerSelection = getComputerChoice ();
 
   if (playerSelection===computerSelection) {
-    return "It is a tie!"
+    return "It is a tie!";
   }
   else if ((playerSelection==='Rock' && computerSelection =='Scissors') || (playerSelection==='Paper' && computerSelection =='Rock') || (playerSelection==='Scissors' && computerSelection =='Paper')) {
     ++p;
-    return "You win! " + playerSelection + " beats " + computerSelection
+    return "You win! " + playerSelection + " beats " + computerSelection;
   }
   else if ((computerSelection==='Rock' && playerSelection =='Scissors') || (computerSelection==='Paper' && playerSelection =='Rock') || (computerSelection==='Scissors' && playerSelection =='Paper')) {
     ++c;
-    return "You lose! " + computerSelection + " beats " + playerSelection
+    return "You lose! " + computerSelection + " beats " + playerSelection;
   }
   else {
-    alert(player + " is invalid input. For next game you must enter selection of rock, paper, or scissors.")
-    return "Invalid user input resulted in cancelled round."
+    alert(player + " is invalid input. For next game you must enter selection of rock, paper, or scissors.");
+    return "Invalid user input resulted in cancelled round.";
   }
 }
 
 function getComputerChoice () {
   let n = Math.floor(Math.random()*3);
   if (n===2) {
-    return 'Rock'
+    return "Rock";
   }
   else if (n===1) {
-    return 'Paper'
+    return "Paper";
   }
   else {
-    return 'Scissors'
+    return "Scissors";
   }
 }
 
