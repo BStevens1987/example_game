@@ -40,6 +40,12 @@ function game () {
   while (p<5 && c<5) {
     console.log(playRound());
   }
+  if (p==5) {
+    return console.log("You win! You have reached 5 wins before the computer. Great job!");
+  }
+  else {
+    return console.log("You lose. The computer has reached 5 wins before you. Please try again!");
+  }
 }
 
 console.log(game());
