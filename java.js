@@ -1,21 +1,26 @@
 let p = 0;
 let c = 0;
 
+
 function playRound() {
-const player = prompt("Enter selection of rock, paper, or scissors: "); 
-const playerSelection = player.toUpperCase().at(0) + player.toLowerCase().slice(1);
-const computerSelection = getComputerChoice ();
+  const player = prompt("Enter selection of rock, paper, or scissors: "); 
+  const playerSelection = player.toUpperCase().at(0) + player.toLowerCase().slice(1);
+  const computerSelection = getComputerChoice ();
 
   if (playerSelection===computerSelection) {
     return "It is a tie!"
   }
-  if ((playerSelection==='Rock' && computerSelection =='Scissors') || (playerSelection==='Paper' && computerSelection =='Rock') || (playerSelection==='Scissors' && computerSelection =='Paper')) {
+  else if ((playerSelection==='Rock' && computerSelection =='Scissors') || (playerSelection==='Paper' && computerSelection =='Rock') || (playerSelection==='Scissors' && computerSelection =='Paper')) {
     ++p;
     return "You win! " + playerSelection + " beats " + computerSelection
   }
-  else {
+  else if ((computerSelection==='Rock' && playerSelection =='Scissors') || (computerSelection==='Paper' && playerSelection =='Rock') || (computerSelection==='Scissors' && playerSelection =='Paper')) {
     ++c;
     return "You lose! " + computerSelection + " beats " + playerSelection
+  }
+  else {
+    alert(player + " is invalid input. For next game you must enter selection of rock, paper, or scissors.")
+    return "Invalid user input resulted in cancelled round."
   }
 }
 
