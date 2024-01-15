@@ -1,7 +1,6 @@
 let p = 0;
 let c = 0;
 
-
 function playRound() {
   const player = prompt("Enter selection of rock, paper, or scissors: "); 
   const playerSelection = player.toUpperCase().at(0) + player.toLowerCase().slice(1);
@@ -42,6 +41,5 @@ function game () {
     console.log(playRound());
   }
 }
-
 
 console.log(game());
