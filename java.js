@@ -1,5 +1,5 @@
-let p = 0;
-let c = 0;
+let pWins = 0;
+let cWins = 0;
 
 function playRound() {
   const player = prompt("Enter selection of rock, paper, or scissors: "); 
@@ -10,11 +10,11 @@ function playRound() {
     return "It is a tie!";
   }
   else if ((playerSelection==='Rock' && computerSelection =='Scissors') || (playerSelection==='Paper' && computerSelection =='Rock') || (playerSelection==='Scissors' && computerSelection =='Paper')) {
-    ++p;
+    ++pWins;
     return "You win! " + playerSelection + " beats " + computerSelection;
   }
   else if ((computerSelection==='Rock' && playerSelection =='Scissors') || (computerSelection==='Paper' && playerSelection =='Rock') || (computerSelection==='Scissors' && playerSelection =='Paper')) {
-    ++c;
+    ++cWins;
     return "You lose! " + computerSelection + " beats " + playerSelection;
   }
   else {
@@ -37,10 +37,10 @@ function getComputerChoice () {
 }
 
 function game () {
-  while (p<5 && c<5) {
+  while (pWins<5 && cWins<5) {
     console.log(playRound());
   }
-  if (p==5) {
+  if (pWins==5) {
     return console.log("You win the game! You have won 5 rounds before the computer. Great job!");
   }
   else {
