@@ -1,1 +1,3 @@
 # example_game
+
+Create a rock paper scissors game function that is made up of smaller functions. The game function allows the user to play rounds against the computer until either wins five rounds first. For each round, display the results. Allow for user entry to be any capitalization of "Rock", "Paper", or "Scissors". If the user enters anything that is not a valid entry, alert the user, show the user the invalid input, re-explain the input rules for the next round, and cancel the current round. 
