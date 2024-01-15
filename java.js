@@ -41,11 +41,11 @@ function game () {
     console.log(playRound());
   }
   if (p==5) {
-    return console.log("You win! You have reached 5 wins before the computer. Great job!");
+    return console.log("You win the game! You have won 5 rounds before the computer. Great job!");
   }
   else {
-    return console.log("You lose. The computer has reached 5 wins before you. Please try again!");
+    return console.log("You lose the game. The computer has won 5 rounds before you. Please try again.");
   }
 }
 
-console.log(game());
+game();
