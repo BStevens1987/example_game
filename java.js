@@ -9,11 +9,15 @@ function playRound() {
   if (playerSelection===computerSelection) {
     return "It is a tie!";
   }
-  else if ((playerSelection==='Rock' && computerSelection =='Scissors') || (playerSelection==='Paper' && computerSelection =='Rock') || (playerSelection==='Scissors' && computerSelection =='Paper')) {
+  else if ((playerSelection==='Rock' && computerSelection =='Scissors') || 
+  (playerSelection==='Paper' && computerSelection =='Rock') || 
+  (playerSelection==='Scissors' && computerSelection =='Paper')) {
     ++pWins;
     return "You win! " + playerSelection + " beats " + computerSelection;
   }
-  else if ((computerSelection==='Rock' && playerSelection =='Scissors') || (computerSelection==='Paper' && playerSelection =='Rock') || (computerSelection==='Scissors' && playerSelection =='Paper')) {
+  else if ((computerSelection==='Rock' && playerSelection =='Scissors') || 
+  (computerSelection==='Paper' && playerSelection =='Rock') || 
+  (computerSelection==='Scissors' && playerSelection =='Paper')) {
     ++cWins;
     return "You lose! " + computerSelection + " beats " + playerSelection;
   }
